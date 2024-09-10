@@ -1,0 +1,180 @@
+:root {
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --header-height: 180px;
+    --sidebar-width: 360px;
+    --footer-height: 90px;
+    --width: 1200px;
+
+    --strong-theme: rgb(10, 104, 255);
+    --elite-theme: rgba(10, 104, 255, 0.85);
+    --theme: rgba(10, 104, 255, 0.7);
+    --normal-theme: rgba(10, 104, 255, 0.4);
+    --dim-theme: rgba(10, 104, 255, 0.2);
+    --light-theme: rgba(10, 104, 255, 0.1);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.1s;
+    transition: color 0.1s;
+}
+textarea {
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+html {
+    font-size: 62.5%;
+    *::-webkit-scrollbar {
+        width: 10px;
+    }
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        background: #cdcdcd;
+        border-radius: 10px;
+    }
+}
+body {
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    background-color: #eee;
+    overflow-y: overlay;
+}
+button,
+input {
+    outline: none;
+    border: none;
+}
+a[href] {
+    text-decoration: none;
+    color: #bf0000;
+    font-weight: 700;
+    transition: 0.2s;
+    &:hover {
+        color: #770000;
+    }
+}
+label {
+    user-select: none;
+    color: #555;
+    transition: 0.2s;
+    &:hover {
+        color: #000;
+    }
+}
+.spinner {
+    animation: rotate360 1s linear infinite;
+}
+@keyframes rotate360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.loading {
+    // background-image: linear-gradient(to left, var(--strong-background), var(--small-background));
+    animation: loading 1s linear infinite alternate;
+    background-size: 300%;
+}
+@keyframes loading {
+    from {
+        background-position-x: 0%;
+    }
+    to {
+        background-position-x: 100%;
+    }
+}
+
+// ========================= // GLOBAL STYLE // ========================= //
+// ========================= // BUTTON //
+.input-group {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    > input[type='checkbox'] {
+        margin-right: 4px;
+    }
+
+    > label {
+        font-size: 1.2rem;
+        min-width: 40px;
+    }
+}
+.input {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.1s;
+    width: 120px;
+    font-size: 1.3rem;
+
+    &:focus {
+        border-color: #333;
+    }
+}
+.input.small {
+    padding: 2px 4px;
+    font-size: 1.2rem;
+}
+.input + .input {
+    margin-left: 4px;
+}
+.input + .button {
+    margin-left: 4px;
+}
+.button {
+    color: #fff;
+    background-color: #555;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: 0.2s;
+    font-size: 1.3rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #777;
+    }
+}
+.button.red {
+    color: #fff;
+    background-color: #bf0000;
+    &:hover {
+        background-color: #770000;
+        color: #fff;
+    }
+}
+.button + .button {
+    margin-left: 4px;
+}
+// ========================= // TEXT //
+
+.small-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #555;
+}
+.text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #555;
+}
+.strong-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+.super-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+}

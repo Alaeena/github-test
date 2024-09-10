@@ -1,0 +1,53 @@
+.header {
+    padding: 8px 15px;
+    border-bottom: 2px solid #bf0000;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #bf0000;
+}
+.content {
+    padding: 15px;
+
+    > div {
+        margin-bottom: 12px;
+    }
+    > .line1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > div {
+            > input {
+                width: auto;
+                margin-right: 4px;
+            }
+            > label {
+                width: auto;
+            }
+        }
+    }
+    .line2 {
+        display: flex;
+        width: 100%;
+        > div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .line3 {
+        display: flex;
+        justify-content: center;
+        > div {
+            padding: 0 2px;
+            > select {
+                width: 100%;
+            }
+        }
+    }
+    button {
+        padding: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+    }
+}

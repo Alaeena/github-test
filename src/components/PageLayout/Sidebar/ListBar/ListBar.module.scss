@@ -1,0 +1,26 @@
+.header {
+    padding: 8px 15px;
+    border-bottom: 2px solid #bf0000;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #bf0000;
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    padding: 15px;
+}
+.list {
+    list-style-type: square;
+    margin-left: 15px;
+    > li::marker {
+        color: #bf0000;
+    }
+    > li {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

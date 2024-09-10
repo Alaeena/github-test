@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    width: 100%;
+    flex: 1;
+    max-width: var(--width);
+    margin: 0 auto;
+}
+.content.row {
+    display: flex;
+}
+.column {
+    flex: 1;
+}

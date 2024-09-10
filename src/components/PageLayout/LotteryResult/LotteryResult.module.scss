@@ -1,0 +1,107 @@
+.content {
+    padding: 4px 12px;
+    margin-bottom: 40px;
+}
+.header {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin: 12px 0 0;
+    color: #333;
+    background-color: #bf0000;
+    color: #ccc;
+    padding: 2px 16px;
+    border-radius: 15px 15px 0 0;
+    height: 40px;
+    display: flex;
+    align-items: end;
+
+    > span {
+        margin: 0 4px;
+        font-weight: 600;
+        color: #eee;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    > span:hover {
+        color: #fff898;
+    }
+}
+.table {
+    width: 100%;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    border-collapse: collapse;
+    th {
+        font-weight: 500;
+        font-size: 2.4rem;
+    }
+
+    th,
+    td {
+        border: 1px solid #aaa;
+        padding: 4px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    td:hover,
+    th:hover {
+        background-color: #ddd;
+        cursor: pointer;
+    }
+    th {
+        width: 15%;
+    }
+    tr:nth-child(even) {
+        background-color: #eaeaea;
+    }
+    .special {
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: #770000;
+    }
+    .first {
+        font-size: 3.2rem;
+        font-weight: 800;
+        color: #bf0000;
+    }
+    .second {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #000;
+    }
+    .third {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #222;
+    }
+    .four {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #444;
+    }
+    .five {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #666;
+    }
+    .six {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #333;
+    }
+}
+.footer {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: #333;
+    background-color: #feffd0;
+    color: #ccc;
+    padding: 2px 16px;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #aaa;
+    border-top: 0;
+    height: 30px;
+    display: flex;
+    align-items: end;
+}
