@@ -1,0 +1,151 @@
+.content {
+    padding: 4px 12px;
+    margin-bottom: 40px;
+}
+.empty {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: var(--yellow3);
+    text-shadow: #000 1px 1px 1px;
+    user-select: none;
+
+    text-align: center;
+    margin-top: 40px;
+}
+.header {
+    text-transform: capitalize;
+    text-shadow: #000 1px 1px 1px;
+
+    font-size: 2rem;
+    margin: 12px 0 0;
+    color: #333;
+    background-color: var(--red);
+    color: #fff;
+    user-select: none;
+    padding: 8px 16px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: end;
+    font-weight: 800;
+
+    &.mobile {
+        font-size: 1.4rem;
+    }
+
+    > span {
+        margin: 0 4px;
+        color: #eee;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    > span:hover {
+        color: #888;
+    }
+}
+.table {
+    width: 100%;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    border-collapse: collapse;
+
+    &.mobile {
+        th {
+            font-size: 1.2rem;
+            width: 20%;
+        }
+        .special {
+            font-size: 3rem;
+        }
+        .first {
+            font-size: 2.6rem;
+        }
+        .second {
+            font-size: 2.2rem;
+        }
+        .third {
+            font-size: 1.8rem;
+        }
+        .four {
+            font-size: 1.6rem;
+        }
+        .five {
+            font-size: 1.4rem;
+        }
+        .six {
+            font-size: 1.4rem;
+        }
+    }
+    th,
+    td {
+        border: 1px solid #999;
+        padding: 4px;
+        color: #ccc;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+    td:hover,
+    th:hover {
+        background-color: rgba($color: #666, $alpha: 0.5);
+        cursor: pointer;
+    }
+    th {
+        width: 15%;
+    }
+    tr:nth-child(even) {
+        background-color: rgba($color: #000, $alpha: 0.5);
+    }
+    .special {
+        font-size: 4rem;
+        font-weight: 800;
+        color: var(--yellow2);
+        text-shadow: #000 1px 1px 1px;
+    }
+    .first {
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: #fff;
+        text-shadow: #000 1px 1px 1px;
+    }
+    .second {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #eee;
+        text-shadow: #000 1px 1px 1px;
+    }
+    .third {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: #ddd;
+        text-shadow: #000 1px 1px 1px;
+    }
+    .four {
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: #ddd;
+        text-shadow: #333 1px 1px 1px;
+    }
+    .five {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #ddd;
+    }
+    .six {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #ddd;
+    }
+}
+.footer {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: #333;
+    background-color: rgba($color: #111, $alpha: 0.5);
+    padding: 2px 16px;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #aaa;
+    border-top: 0;
+    height: 30px;
+    display: flex;
+    align-items: end;
+}

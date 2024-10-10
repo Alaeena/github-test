@@ -1,0 +1,133 @@
+:root {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --font-family: 'Magistral', 'sans-serif';
+    --header-height: 140px;
+    --sidebar-width: 360px;
+    --width: 1200px;
+
+    --red: #cc280d;
+    --dark-red: #770000;
+
+    --yellow0: #ffe300;
+    --yellow1: #f5db79;
+    --yellow2: #ffd212;
+    --yellow3: #d6ad27;
+    --yellow4: #cea82c;
+
+    --purple1: #473e7a;
+    --purple2: #393264;
+    --purple3: #2a254f;
+    --purple4: #1e1948;
+}
+#root {
+    width: 100%;
+    height: 100vh;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.1s;
+    transition: color 0.1s;
+}
+html {
+    font-size: 62.5%;
+    *::-webkit-scrollbar {
+        width: 10px;
+    }
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        background: #cdcdcd;
+        border-radius: 10px;
+    }
+}
+// ========================= // GLOBAL STYLE // ========================= //
+body {
+    line-height: 1.5;
+    font-family: var(--font-family);
+    text-rendering: optimizeSpeed;
+    background-color: #eee;
+    overflow-y: overlay;
+}
+textarea {
+    font-family: var(--font-family);
+}
+button,
+input {
+    font-family: var(--font-family);
+    outline: none;
+    border: none;
+}
+.other-prize,
+.special-prize,
+.first-prize,
+.second-prize,
+.third-prize {
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    opacity: 0.5;
+}
+.other-prize {
+    background-image: url(../../public/svg/other-prize.svg);
+}
+.special-prize {
+    background-image: url(../../public/svg/diamond-prize.svg);
+}
+.first-prize {
+    background-image: url(../../public/svg/gold-prize.svg);
+}
+.second-prize {
+    background-image: url(../../public/svg/silver-prize.svg);
+}
+.third-prize {
+    background-image: url(../../public/svg/bronze-prize.svg);
+}
+@media screen and (max-width: 800px) {
+    .special-prize,
+    .first-prize,
+    .second-prize,
+    .third-prize {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+// ========================= // FONT STYLE // ========================= //
+@font-face {
+    font-family: Magistral;
+    src: url('../assets/fonts/FS\ Magistral-ExtraBold.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: Magistral;
+    src: url('../assets/fonts/FS\ Magistral-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Magistral;
+    src: url('../assets/fonts/FS\ Magistral-Medium.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: Magistral;
+    src: url('../assets/fonts/FS\ Magistral-Book.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: Magistral;
+    src: url('../assets/fonts/FS\ Magistral-Light.ttf');
+    font-weight: 300;
+}

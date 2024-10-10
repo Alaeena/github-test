@@ -1,0 +1,128 @@
+.search {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.mobile {
+        width: 300px;
+        max-width: 80%;
+        margin: 0 auto;
+        .row {
+            flex-direction: column;
+            width: 100%;
+        }
+        .row div {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        > .row div + div {
+            flex: 1;
+            margin-top: 4px;
+        }
+        .row input {
+            flex: 1;
+            padding: 4px 8px;
+            font-size: 1.6rem;
+        }
+        .row label {
+            width: 60px;
+            font-size: 1.6rem;
+        }
+        button {
+            width: 100%;
+            font-size: 1.8rem;
+        }
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    button {
+        margin-top: 8px;
+        display: block;
+        font-size: 1.6rem;
+        width: 160px;
+    }
+    label:hover {
+        color: var(--red);
+    }
+}
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &.mobile {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        background-color: rgba($color: #000, $alpha: 0.5);
+        margin: 8px;
+        padding: 8px;
+        padding-top: 0;
+        border-radius: 8px;
+        flex: 1;
+    }
+    .header {
+        color: #fff;
+        border-bottom: 2px solid var(--red);
+        text-align: center;
+        font-size: 2.4rem;
+        user-select: none;
+        font-weight: 600;
+        color: var(--red);
+    }
+    .list {
+        padding: 8px 0;
+    }
+    .left .item {
+        color: var(--yellow2);
+    }
+    .left .header {
+        color: var(--yellow4);
+        border-color: var(--yellow4);
+    }
+}
+.item {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba($color: #555, $alpha: 0.5);
+    }
+    > svg {
+        fill: var(--yellow1);
+        opacity: 0.5;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.loading {
+    text-align: center;
+    margin: 12px 0;
+    font-size: 3rem;
+    color: #fff;
+    &.red {
+        color: var(--red);
+    }
+}

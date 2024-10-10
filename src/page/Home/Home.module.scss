@@ -1,0 +1,78 @@
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 12px 0 4px;
+    color: var(--yellow2);
+    user-select: none;
+    &.mobile {
+        font-size: 2.4rem;
+    }
+}
+.item {
+    background-color: rgba($color: #000, $alpha: 0.3);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 4px;
+}
+.option {
+    &.mobile {
+        .line1 > button {
+            padding: 2px 4px;
+        }
+    }
+    .line1 {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 12px;
+        margin-top: 12px;
+
+        > button {
+            width: auto;
+            background-color: #ccc;
+            font-size: 1.3rem;
+            padding: 4px 4px;
+            color: #555;
+            font-weight: 600;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #999;
+            border-bottom: 0;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        > button:hover {
+            background-color: #aaa;
+        }
+        > button.disabled {
+            border-color: #666;
+            background-color: #999;
+            pointer-events: none;
+            user-select: none;
+            cursor: default;
+        }
+        > button.active:hover {
+            background-color: var(--dark-red);
+            border-color: var(--dark-red);
+        }
+        > button.active {
+            color: #fff;
+            border-color: var(--red);
+            background-color: var(--red);
+        }
+        > button + button {
+            margin-left: 4px;
+        }
+    }
+    .line2 {
+        display: flex;
+        justify-content: center;
+        > button {
+            width: auto;
+            padding: 8px 12px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+}

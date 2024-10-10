@@ -1,0 +1,175 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.option-prize {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .button.between {
+        justify-content: space-between;
+        background: var(--purple2);
+    }
+    .button {
+        position: relative;
+        background-color: #413971;
+        border: 3px solid var(--yellow1);
+        border-radius: 0;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        color: var(--yellow4);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        user-select: none;
+        cursor: default;
+        width: 240px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &.mobile {
+            margin: 10px 0 20px;
+            border-width: 1.5px;
+            width: 160px;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            > button {
+                font-size: 1rem;
+                line-height: 1.2rem;
+                height: 30px;
+            }
+            > button > span {
+                width: calc(100% - 60px);
+            }
+            .icon > svg {
+                width: 30px;
+                height: 30px;
+                padding: 8px 4px;
+            }
+            & + .button {
+                margin-left: 20px;
+            }
+        }
+
+        > button {
+            flex: 1;
+            height: 100%;
+            background-color: transparent;
+            color: var(--yellow4);
+            color: var(--yellow4);
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            height: 40px;
+
+            > span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 100%;
+                width: calc(100% - 80px);
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        > button.disabled {
+            text-decoration: dashed;
+        }
+        & + .button {
+            margin-left: 80px;
+        }
+    }
+}
+.icon {
+    display: flex;
+    margin: 0;
+    border-radius: 4px;
+    transition: 0.2s;
+
+    > svg {
+        width: 40px;
+        height: 40px;
+        padding: 12px 8px;
+        fill: var(--yellow4);
+        transition: 0.2s;
+    }
+    > svg:hover {
+        fill: #fff;
+        background-color: var(--purple4);
+        cursor: pointer;
+    }
+    &:first-child {
+        margin-right: 0 4px;
+    }
+    &:last-child {
+        margin-left: 0 4px;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.option-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 16px;
+    background-color: transparent;
+    width: 128px;
+    height: 128px;
+
+    &.fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+    }
+    > .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+    }
+    .button-draw {
+        background: #fbce3d url(/public/img/lucky-button.png) no-repeat bottom;
+        background-size: cover;
+        background-position: -0%;
+        border: 2px solid #533815;
+        border-radius: 100%;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+    }
+    &.mobile {
+        font-size: 1.3rem;
+        width: 80px;
+        height: 80px;
+    }
+    &:hover {
+        filter: brightness(75%);
+    }
+}
+
+.message {
+    &.message {
+        font-size: 2rem;
+    }
+    text-align: center;
+    color: var(--yellow4);
+    text-shadow: #030303 1px 1px 1px;
+
+    font-size: 3.2rem;
+    user-select: none;
+    font-weight: 600;
+}

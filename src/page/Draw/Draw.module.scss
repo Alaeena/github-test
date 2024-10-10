@@ -1,0 +1,77 @@
+.header {
+    padding: 20px 0 15px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    user-select: none;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.mobile {
+        > div {
+            height: 80px;
+        }
+        > .header-message {
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
+    }
+    > div {
+        height: 140px;
+    }
+    .header-message {
+        font-weight: 700;
+        font-size: 3.2rem;
+        position: relative;
+        line-height: 40px;
+        color: var(--yellow4);
+    }
+}
+.footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    justify-content: left;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+
+    &.mobile {
+        > a.link {
+            font-size: 1.4rem;
+        }
+        > a.link > svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    > a.link > svg {
+        width: 24px;
+        height: 24px;
+        fill: rgba(255, 255, 255, 0);
+        transition: 0.2s;
+        margin-right: 8px;
+    }
+    > a.link {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        display: inline-flex;
+        display: flex;
+        align-items: center;
+        color: #dfdfdf;
+        margin: 0 8px;
+        text-shadow: #030303 1px 1px 1px;
+    }
+    > a.link:hover {
+        color: var(--yellow4);
+        text-decoration: none;
+        > svg {
+            fill: var(--yellow4);
+        }
+    }
+}

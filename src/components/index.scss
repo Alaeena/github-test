@@ -1,0 +1,209 @@
+a[href] {
+    outline: none;
+    text-decoration: none;
+    color: #413971;
+    font-weight: 700;
+    transition: 0.2s;
+
+    &:hover {
+        color: var(--purple2);
+    }
+}
+label {
+    user-select: none;
+    color: #555;
+    transition: 0.2s;
+    &:hover {
+        color: #000;
+    }
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 25%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.rainbow-text {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    animation: rainbow 8s ease infinite;
+}
+// ========================= // GLOBAL STYLE // ========================= //
+
+@keyframes rotate360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.spinner {
+    animation: rotate360 15s linear infinite;
+}
+.banner {
+    height: 40px;
+    aspect-ratio: 3.333;
+    background-image: url(../../public/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner2 {
+    height: 40px;
+    aspect-ratio: 6.8284;
+    background-image: url(../../public/img/banner2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background {
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background-image: url('../../public/img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(../../public/img/max10-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo {
+    height: 40px;
+    aspect-ratio: 1.484;
+    background-image: url(../../public/img/max10-logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.quay-button {
+    width: 40px;
+    aspect-ratio: 1.42;
+    background-image: url(../../public/img/quay-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.chot-button {
+    width: 40px;
+    aspect-ratio: 2.112;
+    background-image: url(../../public/img/chot-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// ========================= // BUTTON // ========================= //
+.input-group {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    > input[type='checkbox'] {
+        margin-right: 4px;
+    }
+
+    > label {
+        font-size: 1.4rem;
+        min-width: 50px;
+    }
+}
+.input {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.1s;
+    width: 120px;
+    font-size: 1.3rem;
+
+    &:focus {
+        border-color: #333;
+    }
+}
+.input.small {
+    padding: 2px 4px;
+    font-size: 1.2rem;
+}
+.input + .input {
+    margin-left: 4px;
+}
+.input + .button {
+    margin-left: 4px;
+}
+.button {
+    color: #fff;
+    background-color: #555;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: 0.2s;
+    font-size: 1.2rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #777;
+    }
+}
+.button.red {
+    color: #fff;
+    background-color: var(--red);
+    &:hover {
+        background-color: var(--dark-red);
+        color: #fff;
+    }
+}
+.button + .button {
+    margin-left: 4px;
+}
+// ========================= // TEXT // ========================= //
+
+.small-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #eee;
+}
+.text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #eee;
+}
+.strong-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.super-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+}
+@media screen and (max-width: 800px) {
+    .icon {
+        width: 55px;
+        height: 55px;
+    }
+    .button {
+        font-size: 1.2rem;
+    }
+    .input {
+        width: 140px;
+        text-align: center;
+    }
+
+    .small-text {
+        font-size: 1.4rem;
+    }
+    .text {
+        font-size: 1.6rem;
+    }
+    .strong-text {
+        font-size: 1.8rem;
+    }
+    .super-text {
+        font-size: 2rem;
+    }
+}
