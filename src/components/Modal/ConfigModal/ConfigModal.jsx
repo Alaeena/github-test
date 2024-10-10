@@ -50,43 +50,40 @@ const ConfigModal = ({ mobile, setVisible }) => {
                     </div>
                     <div className={cx('range')}>
                         <h4>Thời gian chặn</h4>
+                        <p>*Thời gian kết thúc phải lớn hơn thời gian bắt đầu*</p>
                         <div>
                             <div className={cx('row')}>
-                                <input
-                                    placeholder="Giờ"
-                                    onChange={handleInput}
-                                    value={stopHour}
-                                    name="stopHour"
-                                    type="number"
-                                />
-                                giờ
-                                <input
-                                    placeholder="Phút"
-                                    onChange={handleInput}
-                                    value={stopMinute}
-                                    name="stopMinute"
-                                    type="number"
-                                />
-                                phút
+                                <select onChange={handleInput} value={stopHour} name="stopHour" type="number">
+                                    {Array.from({ length: 24 }, (_, i) => i).map((value) => (
+                                        <option key={value} value={value}>
+                                            {value} giờ
+                                        </option>
+                                    ))}
+                                </select>
+                                <select onChange={handleInput} value={stopMinute} name="stopMinute" type="number">
+                                    {Array.from({ length: 60 }, (_, i) => i).map((value) => (
+                                        <option key={value} value={value}>
+                                            {value} phút
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <span>-</span>
                             <div className={cx('row')}>
-                                <input
-                                    placeholder="Giờ"
-                                    onChange={handleInput}
-                                    value={releaseHour}
-                                    name="releaseHour"
-                                    type="number"
-                                />
-                                giờ
-                                <input
-                                    placeholder="Phút"
-                                    onChange={handleInput}
-                                    value={releaseMinute}
-                                    name="releaseMinute"
-                                    type="number"
-                                />
-                                phút
+                                <select onChange={handleInput} value={releaseHour} name="releaseHour" type="number">
+                                    {Array.from({ length: 24 }, (_, i) => i).map((value) => (
+                                        <option key={value} value={value}>
+                                            {value} giờ
+                                        </option>
+                                    ))}
+                                </select>
+                                <select onChange={handleInput} value={releaseMinute} name="releaseMinute" type="number">
+                                    {Array.from({ length: 60 }, (_, i) => i).map((value) => (
+                                        <option key={value} value={value}>
+                                            {value} phút
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                         </div>
                     </div>

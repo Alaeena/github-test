@@ -29,6 +29,7 @@
     border: 3px solid var(--yellow3);
     h2 {
         font-weight: 700;
+        user-select: none;
         font-size: 4rem;
         position: relative;
         line-height: 40px;
@@ -56,28 +57,40 @@
     }
 }
 .range {
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: #555 1px 1px 1px;
-
+    > h4 {
+        margin-bottom: 4px;
+        font-size: 2rem;
+        color: #fff;
+        text-shadow: #555 1px 1px 1px;
+        user-select: none;
+    }
+    > p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #aaa;
+        user-select: none;
+    }
+    > span {
+        margin-right: 8px;
+        user-select: none;
+        font-weight: 700;
+        line-height: 100%;
+    }
     > div {
+        margin-top: 8px;
         display: flex;
     }
     .row {
         margin-right: 8px;
     }
-    .row input {
+    .row select {
         width: auto;
         margin-right: 4px;
         padding: 4px;
-        width: 50px;
-        text-align: center;
         border-radius: 4px;
     }
-    span {
-        margin-right: 8px;
-    }
-    .row input + input {
+
+    .row select + select {
         margin-left: 4px;
     }
 }
