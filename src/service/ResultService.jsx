@@ -35,6 +35,8 @@ export const getTicketInfo = async (dateString, phone) => {
             '_json|prop|mobile': phone,
             '_json|prop|lotto_drawdate': dateString,
         });
+        console.log(res);
+
         return res.data;
     } catch (error) {
         console.log(error);

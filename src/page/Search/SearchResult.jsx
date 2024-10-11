@@ -11,17 +11,34 @@ const cx = classNames.bind(Styles);
 
 const filterResult = (result, value) => result.filter((item) => result_map[item.lotto_result]?.position == value);
 
-function SearchResult({ result, loading, mobile }) {
+function SearchResult({ result, loading, showResult, mobile }) {
     const [data, setData] = useState();
 
     return (
         <>
             {loading ? (
-                <div className={cx('loading', 'red')}>{loading}</div>
+                <div className={cx('loading', 'red')}>loading...</div>
             ) : !result ? (
                 <></>
             ) : result.length == 0 ? (
                 <div className={cx('loading', 'red')}>Không có kết quả</div>
+            ) : !showResult ? (
+                <div className={cx('content', { mobile })}>
+                    <div className={cx('right')}>
+                        <div className={cx('header')}>Mã thưởng</div>
+                        <div className={cx('list')}>
+                            {filterResult(result, 'right').map((item, index) => {
+                                const { ticket_number } = item;
+
+                                return (
+                                    <div key={index} className={cx('item')}>
+                                        {ticket_number} - Chưa mở thưởng
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
             ) : (
                 <div className={cx('content', { mobile })}>
                     <div className={cx('left')}>
@@ -65,7 +82,8 @@ function SearchResult({ result, loading, mobile }) {
 }
 SearchResult.propTypes = {
     result: PropTypes.any,
-    loading: PropTypes.string.isRequired,
     mobile: PropTypes.bool.isRequired,
+    loading: PropTypes.bool.isRequired,
+    showResult: PropTypes.bool.isRequired,
 };
 export default SearchResult;

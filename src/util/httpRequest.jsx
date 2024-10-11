@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://13.212.10.112:4000/api/service/run-script';
+const baseURL = 'https://m10xs.site/api/service/run-script';
 const request = axios.create({
     baseURL,
     headers: { Authorization: '' },

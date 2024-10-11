@@ -17,8 +17,6 @@ const getDateString = (dateString) => {
     }
     return dayjs(dateString, 'YYYY-MM-DD').isValid() ? dateString : dayjs().format('YYYY-MM-DD');
 };
-const LOADING_TEXT = 'loading...';
-const BLOCKED_TEXT = 'Đang cập nhật kết quả, vui lòng thử lại sau';
 
 function Search() {
     const { state } = useLocation();
@@ -28,7 +26,9 @@ function Search() {
     const [result, setResult] = useState();
     const [date, setDate] = useState(getDateString(state?.date));
     const [phone, setPhone] = useState(state?.phone ? state?.phone : '');
-    const [loading, setLoading] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [showResult, setShowResult] = useState(false);
+    console.log(result);
 
     const searchResult = () => {
         const searchDate = dayjs(date, 'YYYY-MM-DD');
@@ -36,18 +36,19 @@ function Search() {
         if (!phone || !searchDate.isValid()) {
             return;
         } else if (!isSearchable(searchDate, storage)) {
-            setLoading(BLOCKED_TEXT);
-            return;
+            setShowResult(false);
+        } else {
+            setShowResult(true);
         }
         const dateString = searchDate.format('YYYY/MM/DD');
-        setLoading(LOADING_TEXT);
+        setLoading(true);
 
         getTicketInfo(dateString, phone)
             .then((data) => {
                 setResult(data);
             })
             .finally(() => {
-                setLoading('');
+                setLoading(false);
             });
     };
     useEffect(searchResult, []);
@@ -85,7 +86,7 @@ function Search() {
                     Dò kết quả
                 </button>
             </div>
-            <SearchResult mobile={mobile} loading={loading} result={result} />
+            <SearchResult mobile={mobile} loading={loading} showResult={showResult} result={result} />
         </div>
     );
 }
