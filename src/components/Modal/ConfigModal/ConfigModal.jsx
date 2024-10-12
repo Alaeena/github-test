@@ -46,7 +46,10 @@ const ConfigModal = ({ mobile, setVisible }) => {
                     </div>
                     <div className={cx('row')}>
                         <input type="checkbox" id="allowDrawable" onChange={handleSet} checked={drawable} />
-                        <label htmlFor="allowDrawable">Cho phép quay mà không chặn theo khung giờ (6h15-7h00)</label>
+                        <label htmlFor="allowDrawable">
+                            Cho phép quay mà không chặn theo khung giờ ({stopHour}h{stopMinute}-{releaseHour}h
+                            {releaseMinute})
+                        </label>
                     </div>
                     <div className={cx('range')}>
                         <h4>Thời gian chặn</h4>

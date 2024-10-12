@@ -16,7 +16,6 @@ function Calender() {
     const daysListGenerator = CalendarObjectGenerator(currentDate);
 
     const dateArrowHandler = (date) => {
-        console.log(date);
         setSearchParams({ date: date.format('DD/MM/YYYY') });
     };
     const handlePreviousMonthClick = (day) => {

@@ -28,7 +28,6 @@ const ResultModal = ({ data = {}, setData, mobile }) => {
         { amount: 0, total_value: 0 },
     );
     let count = 0;
-    console.log(summary);
 
     return createPortal(
         <div className={cx('overlay')} onClick={() => setData()}>

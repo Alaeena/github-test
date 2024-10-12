@@ -137,14 +137,14 @@ function LotteryResult({ mobile }) {
                             {lotteryResults[prize_map.fifth][1]}
                         </td>
                         <td colSpan="4" className={cx('five')}>
-                            {lotteryResults[prize_map.fifth][0]}
+                            {lotteryResults[prize_map.fifth][2]}
                             <br></br>
-                            {lotteryResults[prize_map.fifth][1]}
+                            {lotteryResults[prize_map.fifth][3]}
                         </td>
                         <td colSpan="4" className={cx('five')}>
-                            {lotteryResults[prize_map.fifth][0]}
+                            {lotteryResults[prize_map.fifth][4]}
                             <br></br>
-                            {lotteryResults[prize_map.fifth][1]}
+                            {lotteryResults[prize_map.fifth][5]}
                         </td>
                     </tr>
                     <tr>
@@ -153,10 +153,10 @@ function LotteryResult({ mobile }) {
                             {lotteryResults[prize_map.sixth][0]}
                         </td>
                         <td colSpan="4" className={cx('six')}>
-                            {lotteryResults[prize_map.sixth][0]}
+                            {lotteryResults[prize_map.sixth][1]}
                         </td>
                         <td colSpan="4" className={cx('six')}>
-                            {lotteryResults[prize_map.sixth][0]}
+                            {lotteryResults[prize_map.sixth][2]}
                         </td>
                     </tr>
                     <tr>

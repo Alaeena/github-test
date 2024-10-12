@@ -6,7 +6,7 @@ const initState = {
     stopHour: 18,
     stopMinute: 15,
     releaseHour: 18,
-    releaseMinute: 45
+    releaseMinute: 45,
 };
 
 export default {

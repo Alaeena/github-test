@@ -28,7 +28,6 @@ function Search() {
     const [phone, setPhone] = useState(state?.phone ? state?.phone : '');
     const [loading, setLoading] = useState(false);
     const [showResult, setShowResult] = useState(false);
-    console.log(result);
 
     const searchResult = () => {
         const searchDate = dayjs(date, 'YYYY-MM-DD');

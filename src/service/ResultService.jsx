@@ -29,15 +29,25 @@ export const processLottery = async (allowSpecial) => {
 };
 export const getTicketInfo = async (dateString, phone) => {
     try {
-        const res = await post(``, {
-            type: 'be',
-            name: 'get_user_ticket_infos',
-            '_json|prop|mobile': phone,
-            '_json|prop|lotto_drawdate': dateString,
-        });
-        console.log(res);
-
-        return res.data;
+        let resDataList = [];
+        let limit = 400;
+        let page = 1;
+        do {
+            const response = await post(``, {
+                type: 'be',
+                name: 'get_user_ticket_infos',
+                '_json|prop|mobile': phone,
+                '_json|prop|lotto_drawdate': dateString,
+                '_json|prop|page': page,
+                '_json|prop|limit': limit,
+            });
+            if (response.status === true) {
+                if (response.data.length == 0) break;
+                resDataList = [...resDataList, ...response.data];
+                page += 1;
+            } else break;
+        } while (resDataList.length < page * limit);
+        return resDataList;
     } catch (error) {
         console.log(error);
         return null;
