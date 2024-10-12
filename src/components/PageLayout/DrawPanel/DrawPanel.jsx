@@ -5,6 +5,7 @@ import { getLotteryResults, processLottery } from '@/service/ResultService';
 import PanelList from './PanelList/PanelList';
 import useDraw, { isDrawable } from '@/util/useDraw';
 import { LeftButton, RightButton } from '@/components/Icon/Regular';
+import { newtSocketPrize } from '@/service/SocketService';
 import { prize_map } from '@/util/useDraw';
 
 import classNames from 'classnames/bind';
@@ -64,6 +65,7 @@ const DrawPanel = ({ mobile }) => {
             setDebounce(false);
             setAnimation('default');
             setState('idle');
+            newtSocketPrize(value, prizeItem.map, countItem);
         }
     };
     const onNewDraw = () => {

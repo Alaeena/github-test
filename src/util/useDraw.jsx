@@ -50,6 +50,7 @@ export const intro_map = [
 export const result_map = {
     0: { text: 'Chưa mở thưởng', position: 'right' },
     11: { text: 'Không trúng', position: 'right' },
+    12: { text: 'Đang quay số', position: 'right' },
     10: { text: 'Trúng nhiều giải', position: 'left' },
     7: { text: 'Giải bảy', position: 'left' },
     6: { text: 'Giải sáu', position: 'left' },
@@ -58,7 +59,7 @@ export const result_map = {
     3: { text: 'Giải ba', position: 'left' },
     2: { text: 'Giải nhì', position: 'left' },
     1: { text: 'Giải nhất', position: 'left' },
-    99: { text: 'Chưa mở thưởng', position: 'left' },
+    99: { text: 'Giải đặc biệt', position: 'left' },
 };
 
 // text map phần dữ liệu từ back-end

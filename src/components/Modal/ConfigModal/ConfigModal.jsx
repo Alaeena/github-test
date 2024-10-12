@@ -49,7 +49,7 @@ const ConfigModal = ({ mobile, setVisible }) => {
                         <label htmlFor="allowDrawable">Cho phép quay mà không chặn theo khung giờ (6h15-7h00)</label>
                     </div>
                     <div className={cx('range')}>
-                        <h4>Thời gian chặn</h4>
+                        <h4>Thời gian chặn (debug)</h4>
                         <p>*Thời gian kết thúc phải lớn hơn thời gian bắt đầu*</p>
                         <div>
                             <div className={cx('row')}>

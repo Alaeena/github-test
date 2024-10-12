@@ -27,19 +27,3 @@ export const processLottery = async (allowSpecial) => {
         return null;
     }
 };
-export const getTicketInfo = async (dateString, phone) => {
-    try {
-        const res = await post(``, {
-            type: 'be',
-            name: 'get_user_ticket_infos',
-            '_json|prop|mobile': phone,
-            '_json|prop|lotto_drawdate': dateString,
-        });
-        console.log(res);
-
-        return res.data;
-    } catch (error) {
-        console.log(error);
-        return null;
-    }
-};

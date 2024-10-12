@@ -12,7 +12,7 @@ const cx = classNames.bind(Styles);
 
 function Draw() {
     const [mobile] = useMobile();
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
 
     return (
         <div className={cx('container')}>

@@ -4,8 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import useMobile from '@/util/useMobile';
 import SearchResult from './SearchResult';
-import { getTicketInfo } from '@/service/ResultService';
-import useDraw, { isSearchable } from '@/util/useDraw';
+import { getSocketTicket } from '@/service/SocketService';
 
 import classNames from 'classnames/bind';
 import Styles from './Search.module.scss';
@@ -20,36 +19,24 @@ const getDateString = (dateString) => {
 
 function Search() {
     const { state } = useLocation();
-    const { storage } = useDraw();
     const [mobile] = useMobile();
 
     const [result, setResult] = useState();
     const [date, setDate] = useState(getDateString(state?.date));
     const [phone, setPhone] = useState(state?.phone ? state?.phone : '');
     const [loading, setLoading] = useState(false);
-    const [showResult, setShowResult] = useState(false);
-    console.log(result);
 
     const searchResult = () => {
-        const searchDate = dayjs(date, 'YYYY-MM-DD');
-
-        if (!phone || !searchDate.isValid()) {
+        if (!phone || !dayjs(date, 'YYYY-MM-DD').isValid()) {
             return;
-        } else if (!isSearchable(searchDate, storage)) {
-            setShowResult(false);
-        } else {
-            setShowResult(true);
         }
-        const dateString = searchDate.format('YYYY/MM/DD');
+        const dateString = dayjs(date, 'YYYY-MM-DD').format('YYYY/MM/DD');
         setLoading(true);
 
-        getTicketInfo(dateString, phone)
-            .then((data) => {
-                setResult(data);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
+        getSocketTicket(dateString, phone, (response) => {
+            setResult(response);
+            setLoading(false);
+        });
     };
     useEffect(searchResult, []);
 
@@ -86,7 +73,7 @@ function Search() {
                     Dò kết quả
                 </button>
             </div>
-            <SearchResult mobile={mobile} loading={loading} showResult={showResult} result={result} />
+            <SearchResult mobile={mobile} loading={loading} result={result} />
         </div>
     );
 }
