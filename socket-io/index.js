@@ -28,7 +28,11 @@ const Prizes = Object.freeze({
 
 const io = new Server({
     cors: {
-        origin: 'http://localhost:3000',
+        origin: [
+            'http://localhost:3000',
+            'https://xsm10.live',
+            'http://shop-app-front.s3-website-ap-southeast-1.amazonaws.com',
+        ],
     },
 });
 
